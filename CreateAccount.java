@@ -1,12 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 
-/**
- *
- * @author HP
- */
 import javax.swing.*;
 public class CreateAccount extends javax.swing.JFrame{
     private Customer loggedInCustomer;
@@ -16,14 +8,7 @@ public class CreateAccount extends javax.swing.JFrame{
         this.loggedInCustomer = customer;
         initComponents();
     }
-    /**
-public static void main(String[] args) {
-        new CreateAccount().setVisible(true);
-    }
-
-   **/
-
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    
     private void initComponents() {
 
         buttonGroup1 = new javax.swing.ButtonGroup();
@@ -240,16 +225,14 @@ public static void main(String[] args) {
         );
 
         pack();
-    }// </editor-fold>//GEN-END:initComponents
+    }
 
-    private void btnCreateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreateActionPerformed
+    private void btnCreateActionPerformed(java.awt.event.ActionEvent evt) {
         try {
             Bank bank = Bank.getInstance();
             
             String accNo = txtAccountNo.getText();
             double deposit = Double.parseDouble(txtDeposit.getText());
-            
-            // String password = new String(txtDe.getPassword());
             bank.openAccount(loggedInCustomer, accNo, deposit, "Saving");
             
             BankAccount account; 
@@ -278,11 +261,10 @@ public static void main(String[] args) {
       
 
 
-    }//GEN-LAST:event_btnCreateActionPerformed
+    }
 
 
-    private void btnClearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClearActionPerformed
-        // TODO add your handling code here:
+    private void btnClearActionPerformed(java.awt.event.ActionEvent evt) {
         txtAccountNo.setText("");
         txtName.setText("");
         txtDeposit.setText("");
@@ -290,7 +272,7 @@ public static void main(String[] args) {
         txtPhone.setText("");
         txtEmail.setText("");
         txtAddress.setText("");
-    }//GEN-LAST:event_btnClearActionPerformed
+    }
 
     private void txtAccountNoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAccountNoActionPerformed
         // TODO add your handling code here:
