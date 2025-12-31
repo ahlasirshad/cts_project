@@ -1,13 +1,3 @@
-//<<<<<<< HEAD
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-
-/**
- *
- * @author HP
- */
 import java.util.ArrayList;
 public class Bank {
     private static Bank instance;
@@ -65,23 +55,6 @@ public class Bank {
         //customers.add(newCustomer);
     }
    
-    /**
-    public void registerCustomer( String username, String password, String accountNumber, double deposit, String accountType) {
-     //BankAccount account = new BankAccount(accountNumber, deposit);   
-     BankAccount account;
-
-        // Polymorphism
-        if (accountType.equalsIgnoreCase("Savings")) {
-            account = new SavingsAccount(accountNumber, initialDeposit);
-        } else if (accountType.equalsIgnoreCase("Current")) {
-            account = new CurrentAccount(accountNumber, initialDeposit);
-        } else {
-            throw new IllegalArgumentException("Invalid account type");
-        }
-    Customer newCustomer = new Customer(username, password, account);
-    customers.add(newCustomer);
-}
-**/
 public Customer validateLogin(String username, String password) {
     for (Customer c : customers) {
         if (c.getUsername().equals(username) && c.getPassword().equals(password)) {
